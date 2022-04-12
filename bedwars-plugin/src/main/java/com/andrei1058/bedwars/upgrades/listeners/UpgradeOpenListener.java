@@ -37,7 +37,7 @@ public class UpgradeOpenListener implements Listener {
         IArena a = Arena.getArenaByPlayer(e.getPlayer());
         if (a == null) return;
         if(!a.getStatus().equals(GameState.playing)) return;
-        Location l = e.getRightClicked().getLocation();
+        Location l = e.getLeftClicked().getLocation();
         for (ITeam t : a.getTeams()) {
             Location l2 = t.getTeamUpgrades();
             if (l.getBlockX() == l2.getBlockX() && l.getBlockY() == l2.getBlockY() && l.getBlockZ() == l2.getBlockZ()) {
